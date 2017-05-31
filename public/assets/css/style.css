@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400,600');
+
+/***** BG *****/
+body {
+	background-image: url('../background.jpg');
+}
+.logo {
+	margin-left: 100px;
+}
+
+/***** NAV *****/
+.navbar-default {
+	height: 71px;
+	border-bottom-width: 5px;
+	border-bottom-color: #1b8cac;
+	background-color: #fff;
+}
+.navbar-brand > img {
+	display: block;
+	width: 60%;
+}
+
+/***** HEADINGS *****/
+h1 {
+	font-family: 'Kanit', sans-serif;
+}
+
+/***** Transaction Header *****/
+.header {
+	height: 50px;
+	background-color: #0c8397;
+}
+.box {
+	background-color: #fff;
+}
+.icon {
+	float: left;
+	width: 25px;
+	margin: 15px;
+}
+p {
+	font-family: 'Kanit', sans-serif;
+	font-weight: 300;
+}
+.Tranp {
+	font-size: 18px;
+	padding-top: 10px;
+	text-align: center;
+	color: rgb(245, 245, 245);
+}
+.Tranb {
+	font-family: 'Kanit';
+	font-size: small;
+	font-weight: bold;
+}
+
+/***FORM***/
+input[type=text] {
+	font-family: 'Kanit', sans-serif;
+	box-sizing: content-box;
+	margin: 0 0 20px 0;
+	padding: 0;
+	border: none;
+	border-bottom: 1px solid #9e9e9e;
+	border-radius: 0;
+	outline: none;
+	background-color: inherit;
+	box-shadow: none;
+}
+input[type=text]:focus {
+	border-bottom: 1px solid grey;
+	box-shadow: none;
+}
+.input-group-addon:first-child {
+	padding: 0;
+	border: none;
+	background-color: inherit;
+}
+.input-group .form-control {
+	width: 320px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+.transactions {
+	padding: 20px;
+}
+.form-control[disabled]{
+	background-color: transparent;
+}
+.submit {
+	font-family: 'Kanit', sans-serif;
+	font-weight: 300;
+	padding: 5px 50px 5px 50px;
+	color: #fff;
+	border-radius: 0;
+	background-color: #ee7033;
+}
+
+.table > tbody > tr > td:first-child{
+	padding: 2px ;
+}
+table {
+	font-family: 'Kanit', sans-serif;
+}
+span {
+	font-size: 12px;
+	display: block;
+	float: left;
+}

@@ -1,0 +1,12 @@
+<table class="table table-hover">
+	<tbody>
+	    <tr ng-repeat="tran in $ctrl.trans">
+	        <td style="background-color: {{tran.categoryCode}}"></td>
+	        <td>{{tran.transactionDate | date:'MMM.dd'}}</td>
+	        <td><img width="30px" data-ng-src="{{tran.merchantLogo}}" alt="logo" /></td>
+	        <td>
+	            <div>{{tran.merchant}}</div> <span>{{tran.transactionType}}</span></td>
+	        <td>-{{tran.amount | currency}}</td>
+	    </tr>
+    </tbody>
+</table>
