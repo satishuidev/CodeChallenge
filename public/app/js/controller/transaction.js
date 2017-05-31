@@ -16,10 +16,13 @@
                     if (transCtrl.transaction.amount <= transCtrl.total) {
                         showTransfer(true);
                         transCtrl.insufficientFunds = false;
+                        transCtrl.isValid = true;
                     } else {
                         transCtrl.insufficientFunds = true;
+                        transCtrl.isValid = false;
                     }
                     transCtrl.amountNotAllowed = false;
+                    transCtrl.isValid = false;
                 }
             } else {
                 transCtrl.isValid = false;
