@@ -1,16 +1,15 @@
-(function(angular){
-    angular.module('PeachtreeApp').controller('transactionCtrl', ['transactionService',function(transactionService) {
+(function(angular) {
+    angular.module('PeachtreeApp').controller('transactionCtrl', ['transactionService', function(transactionService) {
         var transCtrl = this;
         // getting intial data from server
-        var promise = transactionService.getTransactions();
-        promise.then(function(data) {
+        var getTran = transactionService.getTransactions();
+        getTran.then(function(data) {
             loadTrnData(data.data.data);
         });
 
         initData();
 
         transCtrl.onSubmit = function(form) {
-            //console.log(transCtrl.transaction);
             if (form.$valid) {
                 transCtrl.isValid = true;
                 if (!isNaN(parseFloat(transCtrl.transaction.amount))) {
