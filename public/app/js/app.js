@@ -1,3 +1,3 @@
 (function(angular) {
-    angular.module('PeachtreeApp', []);
+    angular.module('PeachtreeApp', ['ngRoute']);
 })(angular);

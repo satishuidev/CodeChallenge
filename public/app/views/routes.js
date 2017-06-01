@@ -1,8 +1,7 @@
 (function(angular) {
-    angular.module('PeachtreeApp', ['ngRoute'])
+    angular.module('PeachtreeApp')
         .config(function($routeProvider, $locationProvider) {
             $locationProvider.hashPrefix('');
-            console.log('Routes script pulled');
             $routeProvider
                 .when('/', {
                     templateUrl: '/app/views/view.html'
