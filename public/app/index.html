@@ -25,46 +25,7 @@
     <div class="container" ng-controller="transactionCtrl as tc">
         <div class="row row-offcanvas row-offcanvas-right">
             <div class="col-xs-12 col-sm-4">
-                <div class="box">
-                    <form name="form" novalidate>
-                        <div class="header">
-                            <img src="assets/icons/arrows.png" alt="arrows" class="icon">
-                            <p class="Tranp ">Make a Transfer</p>
-                        </div>
-                        <div class="well">
-                            <p class="Tranb ">FROM ACCOUNT</p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Free Checking(4692) - Available ${{tc.total}}" disabled>
-                            </div>
-                            <div>
-                                <p class="Tranb">TO ACCOUNT</p>
-                                <div class="input-group">
-                                    <input type="text" name="merchant" class="form-control" required ng-model="tc.transaction.merchant" placeholder="Georgia Power Electric Company">
-                                    <span style="color:red" ng-show="!tc.isValid && !tc.transaction.merchant">*required</span>
-                                </div>
-                            </div>
-                            <div>
-                                <p class="Tranb">AMOUNT</p>
-                                <div class="input-group">
-                                    <div class="input-group-addon">$</div>
-                                    <input type="text" name="amount" ng-model="tc.transaction.amount" required class="form-control" placeholder="0.00" />
-                                    <span style="color:red" ng-show="!tc.isValid && !tc.transaction.amount">* required </span>
-                                    <span style="color:red" ng-show="!tc.isValid && tc.amountNotAllowed"> * Number required</span>
-                                    <span style="color:red" ng-show="!tc.isValid && tc.insufficientFunds"> * Insufficient funds</span>
-                                </div>
-                            </div>
-                            <div>
-                                <div ng-show="!tc.myFormValues.showTransfer">
-                                    <button type="submit" ng-click="tc.onSubmit(form)" class="btn submit center-block">SUBMIT</button>
-                                </div>
-                                <div ng-show="tc.myFormValues.showTransfer" class="center-block">
-                                    <button ng-click="tc.onCancel()" class="btn active">CANCEL</button>
-                                    <button ng-click="tc.transferMoney()" class="btn submit">TRANSFER</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <ng-view></ng-view>
             </div>
             <div class="col-xs-12 col-sm-8">
                 <div class="box">
@@ -80,10 +41,14 @@
         </div>
     </div>
     <script src="../assets/js/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
     <script src="/app/js/app.js"></script>
+    <script src="/app/views/routes.js"></script>
     <script src="/app/js/service/transaction.js"></script>
+    
     <script src="/app/js/controller/transaction.js"></script>
     <script src="/app/js/component/transaction.js"></script>
+    
 </body>
 
 </html>

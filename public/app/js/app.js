@@ -1,3 +1,3 @@
-(function(angular){
-angular.module('PeachtreeApp', []);
+(function(angular) {
+    angular.module('PeachtreeApp', []);
 })(angular);
